@@ -1,0 +1,37 @@
+{
+  "name": "http-packages-benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc --noEmit && eslint \"*/**/*.ts\"",
+    "lint-diff": "git diff --name-only --cached --relative | grep \\\\.ts$ | xargs eslint",
+    "postinstall": "npm run build",
+    "precommit": "npm run lint-diff",
+    "start": "ts-node-dev --respawn --transpileOnly ./server.ts"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.2",
+    "@types/node-fetch": "^2.5.4",
+    "@types/request-promise": "^4.1.45",
+    "autocannon": "^4.4.1",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "got": "^10.0.1",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.2"
+  }
+}
