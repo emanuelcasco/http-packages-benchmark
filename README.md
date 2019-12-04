@@ -5,7 +5,7 @@
 
 - [got](https://github.com/sindresorhus/got): Human-friendly and powerful HTTP request library for Node.js.
 
-- [request-promise](https://github.com/request/request-promise): Simplified HTTP request client 'request' with Promise support. Powered by Bluebird..
+- [request-promise](https://github.com/request/request-promise): Simplified HTTP request client 'request' with Promise support. Powered by Bluebird.
 
 - [node-fetch](https://github.com/bitinn/node-fetch): A light-weight module that brings window.fetch to Node.js.
 
@@ -15,7 +15,7 @@
 
 <table>
   <tr>
-    <th>Libraries</th>
+    <th></th>
     <th>request-promise</th>
     <th>node-fetch</th>
     <th>axios</th>
@@ -51,7 +51,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
 
 <table>
   <tr>
-    <th>Libraries</th>
+    <th></th>
     <th>request-promise</th>
     <th>node-fetch</th>
     <th>axios</th>
@@ -174,3 +174,35 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
 * _From [got repository](https://github.com/sindresorhus/got#comparison)._
 
 
+## Performance 
+
+<table>
+  <tr>
+    <th></th>
+    <th>request-promise</th>
+    <th>node-fetch</th>
+    <th>axios</th>
+    <th>got</th>
+  </tr>
+  <tr>
+    <td>Latency avg</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Req/Sec avg</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Bytes/Sec avg</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+</table>
