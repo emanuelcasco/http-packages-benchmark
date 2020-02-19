@@ -230,25 +230,14 @@ for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisa
 && for i in {1..10}; do t -- 'localhost:8080/bent' >> ./benchmark_results/bent.json; sleep 5; done
 ```
 
-<img src="./assets/performance.png">
+### Requests
 
 <table class="table table-bordered table-hover table-condensed">
 <thead><tr><th title="Field #1">Package</th>
-<th title="Field #2">requests/average</th>
-<th title="Field #3">requests/min</th>
-<th title="Field #4">requests/max</th>
-<th title="Field #5">requests/total</th>
-<th title="Field #6">requests/sent</th>
-<th title="Field #7">latency/average (ms)</th>
-<th title="Field #8">latency/min (ms)</th>
-<th title="Field #9">latency/max (ms)</th>
-<th title="Field #10">throughput/average (bytes/sec)</th>
-<th title="Field #11">throughput/min (bytes/sec)</th>
-<th title="Field #12">throughput/max (bytes/sec)</th>
-<th title="Field #13">throughput/total (bytes)</th>
-<th title="Field #14">errors</th>
-<th title="Field #15">timeouts</th>
-<th title="Field #16">connections</th>
+<th title="Field #2">AVG Req/Sec</th>
+<th title="Field #3">MIN Req/Sec</th>
+<th title="Field #4">MAX Req/Sec</th>
+<th title="Field #5">Total Req</th>
 </tr></thead>
 <tbody><tr>
 <td>BENT</td>
@@ -256,17 +245,6 @@ for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisa
 <td align="right">150.45</td>
 <td align="right">531.73</td>
 <td align="right">7125.09</td>
-<td align="right">7226.00</td>
-<td align="right">291.89</td>
-<td align="right">21.45</td>
-<td align="right">5386.92</td>
-<td align="right">2546458.76</td>
-<td align="right">1075449.09</td>
-<td align="right">3800786.55</td>
-<td align="right">50930149.82</td>
-<td align="right">0.91</td>
-<td align="right">0.91</td>
-<td align="right">100</td>
 </tr>
 <tr>
 <td>AXIOS</td>
@@ -274,17 +252,6 @@ for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisa
 <td align="right">162.18</td>
 <td align="right">318.18</td>
 <td align="right">4915.27</td>
-<td align="right">5018.27</td>
-<td align="right">401.57</td>
-<td align="right">23.09</td>
-<td align="right">7887.79</td>
-<td align="right">1756666.76</td>
-<td align="right">1159275.64</td>
-<td align="right">2274363.64</td>
-<td align="right">35134369.45</td>
-<td align="right">2.18</td>
-<td align="right">2.18</td>
-<td align="right">100</td>
 </tr>
 <tr>
 <td>FETCH</td>
@@ -292,17 +259,6 @@ for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisa
 <td align="right">134.27</td>
 <td align="right">524.18</td>
 <td align="right">6672.45</td>
-<td align="right">6773.36</td>
-<td align="right">305.73</td>
-<td align="right">21.45</td>
-<td align="right">6512.33</td>
-<td align="right">2384680.15</td>
-<td align="right">959781.45</td>
-<td align="right">3746851.64</td>
-<td align="right">47694705.09</td>
-<td align="right">0.91</td>
-<td align="right">0.91</td>
-<td align="right">100</td>
 </tr>
 <tr>
 <td>GOT</td>
@@ -310,17 +266,6 @@ for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisa
 <td align="right">156.09</td>
 <td align="right">475.73</td>
 <td align="right">6575.36</td>
-<td align="right">6676.00</td>
-<td align="right">314.17</td>
-<td align="right">28.45</td>
-<td align="right">6127.15</td>
-<td align="right">2350034.62</td>
-<td align="right">1115737.82</td>
-<td align="right">3400498.55</td>
-<td align="right">47000699.27</td>
-<td align="right">0.64</td>
-<td align="right">0.64</td>
-<td align="right">100</td>
 </tr>
 <tr>
 <td>RP</td>
@@ -328,17 +273,6 @@ for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisa
 <td align="right">197.27</td>
 <td align="right">319.27</td>
 <td align="right">5332.64</td>
-<td align="right">5434.91</td>
-<td align="right">355.15</td>
-<td align="right">26.45</td>
-<td align="right">7946.91</td>
-<td align="right">1905893.82</td>
-<td align="right">1410105.45</td>
-<td align="right">2282161.45</td>
-<td align="right">38117684.73</td>
-<td align="right">2.27</td>
-<td align="right">2.27</td>
-<td align="right">100</td>
 </tr>
 <tr>
 <td>APISAUCE</td>
@@ -346,18 +280,110 @@ for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisa
 <td align="right">167.55</td>
 <td align="right">321.55</td>
 <td align="right">5061.09</td>
-<td align="right">5163.64</td>
+</tr>
+</tbody></table>
+
+<img src="./assets/requests.png">
+
+### Latency
+
+<table class="table table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Package</th>
+<th title="Field #7">Latency AVG (ms)</th>
+<th title="Field #8">Latency MIN (ms)</th>
+<th title="Field #9">Latency MAX (ms)</th>
+</tr></thead>
+<tbody><tr>
+<td>BENT</td>
+<td align="right">291.89</td>
+<td align="right">21.45</td>
+<td align="right">5386.92</td>
+</tr>
+<tr>
+<td>AXIOS</td>
+<td align="right">401.57</td>
+<td align="right">23.09</td>
+<td align="right">7887.79</td>
+</tr>
+<tr>
+<td>FETCH</td>
+<td align="right">305.73</td>
+<td align="right">21.45</td>
+<td align="right">6512.33</td>
+</tr>
+<tr>
+<td>GOT</td>
+<td align="right">314.17</td>
+<td align="right">28.45</td>
+<td align="right">6127.15</td>
+</tr>
+<tr>
+<td>RP</td>
+<td align="right">355.15</td>
+<td align="right">26.45</td>
+<td align="right">7946.91</td>
+</tr>
+<tr>
+<td>APISAUCE</td>
 <td align="right">371.74</td>
 <td align="right">24.64</td>
 <td align="right">7714.74</td>
+</tr>
+</tbody></table>
+
+<img src="./assets/latency.png">
+
+### Throughput
+
+<table class="table table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Package</th>
+<th title="Field #10">Throughput AVG (bytes/sec)</th>
+<th title="Field #11">Throughput MIN (bytes/sec)</th>
+<th title="Field #12">Throughput MAX (bytes/sec)</th>
+<th title="Field #13">Throughput total (bytes)</th>
+</tr></thead>
+<tbody><tr>
+<td>BENT</td>
+<td align="right">2546458.76</td>
+<td align="right">1075449.09</td>
+<td align="right">3800786.55</td>
+<td align="right">50930149.82</td>
+</tr>
+<tr>
+<td>AXIOS</td>
+<td align="right">1756666.76</td>
+<td align="right">1159275.64</td>
+<td align="right">2274363.64</td>
+<td align="right">35134369.45</td>
+</tr>
+<tr>
+<td>FETCH</td>
+<td align="right">2384680.15</td>
+<td align="right">959781.45</td>
+<td align="right">3746851.64</td>
+<td align="right">47694705.09</td>
+</tr>
+<tr>
+<td>GOT</td>
+<td align="right">2350034.62</td>
+<td align="right">1115737.82</td>
+<td align="right">3400498.55</td>
+<td align="right">47000699.27</td>
+</tr>
+<tr>
+<td>RP</td>
+<td align="right">1905893.82</td>
+<td align="right">1410105.45</td>
+<td align="right">2282161.45</td>
+<td align="right">38117684.73</td>
+</tr>
+<tr>
+<td>APISAUCE</td>
 <td align="right">1808838.69</td>
 <td align="right">1197614.91</td>
 <td align="right">2298406.91</td>
 <td align="right">36176677.82</td>
-<td align="right">2.55</td>
-<td align="right">2.55</td>
-<td align="right">100</td>
 </tr>
 </tbody></table>
 
-
+<img src="./assets/throughput.png">
