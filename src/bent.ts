@@ -1,17 +1,13 @@
-import axios, { AxiosResponse } from 'axios';
+import bent from 'bent';
 import { Request, Response } from 'express';
 
 import { Album } from '../entities/Album';
 
-const instance = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com',
-  timeout: 10000
-});
+const bGet = bent('https://jsonplaceholder.typicode.com', 'json');
 
 export async function getAllAlbums(req: Request, res: Response) {
   try {
-    const response: AxiosResponse = await instance.get('/albums');
-    const albums: Album[] = response.data;
+    const albums = await bGet('/albums') as Album[];
     console.log(`Retrieved ${albums.length} albums`);
     return res.status(200).send(albums);
   } catch (error) {

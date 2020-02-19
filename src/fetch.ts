@@ -13,7 +13,6 @@ export async function getAllAlbums(req: Request, res: Response) {
   try {
     const albums: Album[] = await fetch(URL, options)
       .then((res: FetchResponse) => res.json());
-
     console.log(`Retrieved ${albums.length} albums`);
     return res.status(200).send(albums);
   } catch (error) {

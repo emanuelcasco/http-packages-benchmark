@@ -1,21 +1,21 @@
-import axios, { AxiosResponse } from 'axios';
+import apisauce from 'apisauce';
 import { Request, Response } from 'express';
 
 import { Album } from '../entities/Album';
 
-const instance = axios.create({
+const instance = apisauce.create({
   baseURL: 'https://jsonplaceholder.typicode.com',
   timeout: 10000
 });
 
 export async function getAllAlbums(req: Request, res: Response) {
-  try {
-    const response: AxiosResponse = await instance.get('/albums');
-    const albums: Album[] = response.data;
+  const response = await instance.get<Album[]>('/albums');
+  if (response.ok && response.data) {
+    const albums = response.data;
     console.log(`Retrieved ${albums.length} albums`);
     return res.status(200).send(albums);
-  } catch (error) {
-    console.log('Error:', error);
+  } else {
+    console.log('Error:', response.problem);
     throw new Error('Cannot retrieve albums from external API');
   }
 }

@@ -13,7 +13,6 @@ const options = {
 export async function getAllAlbums(req: Request, res: Response) {
   try {
     const albums: Album[] = await rp(options);
-
     console.log(`Retrieved ${albums.length} albums`);
     return res.status(200).send(albums);
   } catch (error) {
