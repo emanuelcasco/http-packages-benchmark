@@ -218,6 +218,18 @@ Use autocannon for stress tests:
 ```bash
 autocannon -c 100 -d 20 -m \"GET\" --json 'localhost:8080/<http_package_name>'
 ```
+
+You can also run several tests using:
+
+```bash
+for i in {1..10}; do t -- 'localhost:8080/axios' >> ./benchmark_results/axios.json; sleep 5; done \
+for i in {1..10}; do t -- 'localhost:8080/apisauce' >> ./benchmark_results/apisauce.json; sleep 5; done \
+&& for i in {1..10}; do t -- 'localhost:8080/fetch' >> ./benchmark_results/fetch.json; sleep 5; done \
+&& for i in {1..10}; do t -- 'localhost:8080/got' >> ./benchmark_results/got.json; sleep 5; done \
+&& for i in {1..10}; do t -- 'localhost:8080/rp' >> ./benchmark_results/rp.json; sleep 5; done \
+&& for i in {1..10}; do t -- 'localhost:8080/bent' >> ./benchmark_results/bent.json; sleep 5; done
+```
+
 <img src="./assets/performance.png">
 
 <table class="table table-bordered table-hover table-condensed">
