@@ -44,7 +44,7 @@
     <td><a href="https://npm.anvaka.com/#/view/2d/got">15</a></td>
     <td><a href="https://npm.anvaka.com/#/view/2d/bent">3</a></td>
     <td><a href="https://npm.anvaka.com/#/view/2d/apisauce">2</a></td>
-  </tr>r
+  </tr>
   <tr>
     <td>Minzipped size</td>
     <td>246.4KB *</td>
@@ -60,7 +60,8 @@
     <td>Jan 26, 2015</td>
     <td>Aug 18, 2014</td>
     <td>Mar 27, 2014</td>
-    <td>Abr 6, 2016</td>
+    <td>Nov 7, 2017</td>
+    <td>Apr 9, 2016</td>
   </tr>
 </table>
 
@@ -212,6 +213,11 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
 
 ## Performance
 
+Use autocannon for stress tests:
+
+```bash
+autocannon -c 100 -d 20 -m \"GET\" --json 'localhost:8080/<http_package_name>'
+```
 <img src="./assets/performance.png">
 
 <table class="table table-bordered table-hover table-condensed">
