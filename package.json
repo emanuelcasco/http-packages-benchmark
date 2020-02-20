@@ -20,22 +20,22 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/bent": "^7.0.1",
-    "@types/body-parser": "^1.17.0",
+    "@types/body-parser": "^1.19.0",
     "@types/express": "^4.17.0",
-    "@types/node": "^12.6.2",
+    "@types/node": "^12.12.28",
     "@types/node-fetch": "^2.5.4",
     "@types/request-promise": "^4.1.45",
     "apisauce": "^1.1.1",
-    "autocannon": "^4.4.1",
-    "axios": "^0.19.0",
-    "bent": "^7.0.6",
+    "autocannon": "^4.6.0",
+    "axios": "^0.19.2",
+    "bent": "^7.1.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "got": "^10.0.1",
+    "got": "^10.5.7",
     "node-fetch": "^2.6.0",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.5"
   }
 }
