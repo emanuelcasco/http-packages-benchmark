@@ -15,6 +15,8 @@
 
 - [apisauce](https://github.com/infinitered/apisauce): Axios + standardized errors + request/response transforms.
 
+- [@root/request](https://git.rootprojects.org/root/request.js.git): Drop-in replacement for request.js. 500 LoC, ZERO dependencies. 80% of what you need in less than 20% of the code.
+
 ## Packages comparison
 
 <table>
@@ -79,9 +81,11 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <th>got</th>
     <th>bent</th>
     <th>apisauce</th>
+    <th>@root/request</th>
   </tr>
   <tr>
     <td>HTTP/2 support</td>
+    <td>❌</td>
     <td>❌</td>
     <td>❌</td>
     <td>❌</td>
@@ -97,9 +101,11 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
+    <td>✅</td>
   </tr>
   <tr>
     <td>Promise API</td>
+    <td>✅</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
@@ -115,6 +121,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>Request cancelation</td>
@@ -122,6 +129,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>❌</td>
     <td>✅</td>
+    <td>❌</td>
     <td>❌</td>
     <td>❌</td>
   </tr>
@@ -133,6 +141,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>Cookies (out-of-box)</td>
@@ -142,9 +151,11 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>Follows redirects</td>
+    <td>✅</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
@@ -160,6 +171,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>Handles gzip/deflate</td>
@@ -169,6 +181,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>Advanced timeouts</td>
@@ -178,9 +191,11 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>JSON mode</td>
+    <td>✅</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
@@ -196,6 +211,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>Hooks</td>
@@ -203,6 +219,7 @@ _* **Note:** request-promise has [request](https://github.com/request/request) a
     <td>❌</td>
     <td>✅</td>
     <td>✅</td>
+    <td>❌</td>
     <td>❌</td>
     <td>❌</td>
   </tr>
