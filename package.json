@@ -27,7 +27,7 @@
     "@types/request-promise": "^4.1.45",
     "apisauce": "^1.1.1",
     "autocannon": "^4.6.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bent": "^7.1.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
